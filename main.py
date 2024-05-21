@@ -1,4 +1,12 @@
 import argparse
+from pdf2image import convert_from_path
+
+def convert_pdf_to_images(pdf_filepath):
+    '''
+    Converts a PDF file to a list of images.
+    '''
+    images = convert_from_path(pdf_filepath)
+    return images
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
